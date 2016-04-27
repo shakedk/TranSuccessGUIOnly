@@ -141,7 +141,7 @@ Next iterations: suggestions:
 			draw_areas_on_map = function (jsonFileName) {
 				
 				d3.json(jsonFileName, function (collection) {
-            areasLayer = L.geoJson(data, {
+            areasLayer = L.geoJson(collection, {
 						style : getStyle,
 						onEachFeature: onEachFeature
 					}).addTo(map);
